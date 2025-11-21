@@ -1,7 +1,6 @@
 package ifba;
 
-public class ListaEncadeada {
-	//  NÓ INTERNO 
+public class ListaEncadeada { 
     private class No {
         Telefone dado;
         No proximo;
@@ -19,9 +18,6 @@ public class ListaEncadeada {
         this.inicio = null;
         this.tamanho = 0;
     }
-
-    
-    //     MÉTODOS DE INSERÇÃO
     
 
     public void inserirInicio(Telefone tel) {
@@ -68,10 +64,6 @@ public class ListaEncadeada {
         aux.proximo = novo;
         tamanho++;
     }
-
-    
-    //     MÉTODOS DE REMOÇÃO
-   
 
     public void removerInicio() {
         if (inicio == null) {
@@ -121,9 +113,7 @@ public class ListaEncadeada {
         tamanho--;
     }
 
-    
-    //     MÉTODO VERIFICAR POSIÇÃO
-    
+
     public Telefone verificarPosicao(int pos) {
         if (pos < 0 || pos >= tamanho) {
             System.out.println("Posição inválida.");
@@ -138,25 +128,7 @@ public class ListaEncadeada {
         return aux.dado;
     }
 
-    
-    //     MÉTODO PESQUISAR POR NOME
-   
-    public Telefone pesquisar(String nome) {
-        No aux = inicio;
 
-        while (aux != null) {
-            if (aux.dado.getNome().equalsIgnoreCase(nome)) {
-                return aux.dado;
-            }
-            aux = aux.proximo;
-        }
-
-        return null;
-    }
-
-    
-    //     MÉTODO LISTAR
-   
     public void listar() {
         if (inicio == null) {
             System.out.println("Lista vazia.");
@@ -176,4 +148,18 @@ public class ListaEncadeada {
     public int getTamanho() {
         return tamanho;
     }
+	    public Telefone pesquisar(String nome) {
+        No aux = inicio;
+
+        while (aux != null) {
+            if (aux.dado.getNome().equalsIgnoreCase(nome)) {
+                return aux.dado;
+            }
+            aux = aux.proximo;
+        }
+
+        return null;
+    }
+   
 }
+
