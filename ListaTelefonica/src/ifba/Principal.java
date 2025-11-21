@@ -7,7 +7,7 @@ public class Principal {
 	        Scanner sc = new Scanner(System.in);
 	        ListaEncadeada lista = new ListaEncadeada();
 
-	        int op;
+	        int a;
 
 	        do {
 	            System.out.println("\n===== LISTA TELEFÔNICA =====");
@@ -23,9 +23,9 @@ public class Principal {
 	            System.out.println("0 - Sair");
 	            System.out.print("Opção: ");
 	            op = sc.nextInt();
-	            sc.nextLine(); // limpar buffer
+	            sc.nextLine(); 
 
-	            switch (op) {
+	            switch (a) {
 
 	                case 1:
 	                    System.out.print("Nome: ");
@@ -94,8 +94,9 @@ public class Principal {
 	                    System.out.println("Opção inválida.");
 	            }
 
-	        } while (op != 0);
+	        } while (a != 0);
 
 	        sc.close();
 	    }
 }
+
